@@ -1,0 +1,26 @@
+name: Ping Backend Servers
+
+on:
+  schedule:
+    # Runs every 5 minutes
+    - cron: "*/5 * * * *"
+
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send requests to backend servers
+        run: |
+          urls=(
+            "https://dsa-gpt-72n1.onrender.com/"
+          )
+
+          for url in "${urls[@]}"
+          do
+            echo "Pinging $url"
+            curl -X GET "$url"
+            echo ""
+          done
