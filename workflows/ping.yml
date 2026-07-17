@@ -15,7 +15,8 @@ jobs:
       - name: Send requests to backend servers
         run: |
           urls=(
-            "https://dsa-gpt-72n1.onrender.com/"
+            "https://dsa-gpt-72n1.onrender.com/",
+            "https://college-market-places.onrender.com/health"
           )
 
           for url in "${urls[@]}"
