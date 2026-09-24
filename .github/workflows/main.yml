@@ -17,7 +17,7 @@ jobs:
           urls=(
             "https://dsa-gpt-72n1.onrender.com/health",
             "https://college-market-places.onrender.com/health",
-            https://note-app-qb8n.onrender.com/health
+           "https://note-app-qb8n.onrender.com"
           )
 
           for url in "${urls[@]}"
